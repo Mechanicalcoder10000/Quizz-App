@@ -31,6 +31,7 @@ top:0;
 .divider{
   width: 100%;
 background-color: black;
+
 }
 .footerr{
 
@@ -56,11 +57,24 @@ margin-bottom: 10;
   font-weight: 300;
 }
 
-.content svg {
+.imgs {
   width: 55%;
-  align-self: center;
-  margin-top: -7rem;
+  
+  margin-top: -5rem;
+  
+  min-width: 450px;
  
+}
+@media(max-width:1100px){
+  
+.imgs {
+  width: 55%;
+  
+  margin-top: -9rem;
+  
+  min-width: 450px;
+ 
+}
 }
 
 @media(max-width:600px){
@@ -239,8 +253,4 @@ margin-bottom: 10;
   display: flex;
   justify-content: space-around;
   width: 100%;
-}
-
-.divs{
- width: auto;
 }
