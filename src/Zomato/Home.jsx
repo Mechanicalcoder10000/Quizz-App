@@ -36,18 +36,18 @@ const History=useNavigate();
                 <span style={{fontSize:"2rem"}}>Quiz-Setting</span>
 
                 <div className='setting_input'>
-
-                {error && <ErrorMessage>Please Fill all the fields</ErrorMessage>}
- <TextField  style={{marginBottom:25}} label="Enter your Name" variant="outlined"  onChange={(e)=>setName(e.target.value)}  />
+<div className="divs">{error && <ErrorMessage>Please Fill all the fields</ErrorMessage>}
+ <TextField  style={{marginBottom:25,width:"100%"}} label="Enter your Name" variant="outlined"  onChange={(e)=>setName(e.target.value)}  /></div>
+                
  
- <TextField
+ <div  className="divs"style={{overflow:"hidden",}}><TextField
             select
             label="Select Category"
           
             value={category} 
             onChange={(e)=>setCategory(e.target.value)}
             variant="outlined"
-            style={{ marginBottom: 30 }}
+            style={{ marginBottom: 30,width:"100%" }}
           >
 
 {
@@ -55,15 +55,17 @@ const History=useNavigate();
   Categories.map((cat)=>( <MenuItem  key={cat.category}  value={cat.value}>{cat.category}</MenuItem>))
 }
   
- </TextField>
- <TextField
+ </TextField></div>
+ 
+
+ <div className="divs" style={{overflow:"hidden",width:"100%"}}><TextField
             select
             label="Select Difficulty"
           
            value={difficulty}
            onChange={(e)=>setDifficulty(e.target.value)}
             variant="outlined"
-            style={{ marginBottom: 30 }}
+            style={{ marginBottom: 30 ,width:"100%"}}
           >
             <MenuItem key="Easy" value="easy">
               Easy
@@ -74,7 +76,8 @@ const History=useNavigate();
             <MenuItem key="Hard" value="hard">
               Hard
             </MenuItem>
-          </TextField>
+          </TextField></div>
+ 
           <Button
             variant="contained"
             color="primary"
